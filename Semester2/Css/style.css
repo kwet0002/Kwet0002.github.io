@@ -176,3 +176,31 @@ header .logo {
          font-size: 20px;
      } 
 }
+
+.contactus {
+    background-image: url("/Semester2/Midterm/Image/service.svg");
+    background-size: 1000px;
+    background-position: center;
+}
+.contact-heading {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    flex-direction: column;
+}
+.contact-heading h2 {
+    line-height: 55px;
+    font-size: 2.2rem;
+    color: #07A5E3;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.contact-heading p{
+    font-size: 2.2;
+    color: black;
+    width: 50%;
+}

@@ -1,180 +1,401 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Noto Sans JP', sans-serif;
+/* website main format */
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lato', sans-serif;
 }
-.Main-section {
-    position: relative;
+/* Adding box sizing style to website */
+* {
+    box-sizing: border-box;
+}
+/* styling nav */
+ul{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* Styling the main content */
+.main {
     width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background : url("/Semester2/Midterm/Image/yeah-01.svg")no-repeat;
+    height: 100vh;
+    background-image: url(/Semester2/Midterm/Image/back.svg);
     background-size: cover;
+    background-position: top left;
+    position: relative;
+}
+/* Styling logo */
+.logo img {
+    height: 20px;
+}
+/* styling about us content */
+.about-us {
+    font-size: 1.5rem;
+    line-height: 35px;
+    color: #07A5E3;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: 0px;
+}
+/* styling navigation adding flex and box shadow */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 30px;
+    background-color: white;
+    box-shadow: 2px 2 20px rgba(7, 7, 8, 0.13);
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
+nav ul {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+nav ul li a {
+    height: 40px;
+    line-height: 43px;
+    margin: 8px;
+    padding: 0px 22px;
+    display: flex;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #07A5E3;
+    letter-spacing: 1px;
+}
+/* adding hover style to navigation */
+nav ul li a:hover {
+    background-color: plum;
+    color: royalblue;
+    box-shadow: 5px 10px 30px rgba(207, 12, 149, 0.863);
+    transition: 0.2s;
+}
+/* styling main content  */
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+}
+/* styling image in main content */
+.main-img {
+    width: 500px;
+    height: 400px;
+    margin: 20px;
+}
+
+.main-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* styling short paragrah in the main content */
+.main-text {
+    width: 500px;
+    margin: 20px;
+}
+/* styling heading 1 and paragraph */
+.main-text h1 {
+    font-size: 3.5rem;
+    line-height: 55px;
+    color: #07A5E3;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: 0px;
+}
+.main-text p {
+    font-size: 1rem;
+    color: black;
+}
+
+/* --------------------- Styling button leading to about page  */
+.about-page {
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #07A5E3;
+    color: white;
+    box-shadow: 5px 10px 30px rgba(45, 103, 211, 0.863);
+    text-transform: uppercase;
+
+}
+.about-page:hover {
+    background: royalblue;
+    transition: 0.2s;
+}
+
+/* -------------Styling schedule layout, where it should be positioned on the website */
+.schedule {
+    position: absolute;
+    left: 20%;
+    bottom: 10px;
+    transform: translateX(-20%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.schedule-time,
+.contact-details {
+    margin: 0px 20px;
+}
+.schedule-time h3,
+.contact-details h3{
+    font-weight: 700;
+    color: #07A5E3;
+    font-size: 1.6rem;
+    margin: 0px;
+}
+
+.schedule-time p,
+.contact-details p {
+    color: black;
+    font-size: 1.1rem;
+}
+
+
+/* ------styling services--------- */
+.services {
+    background-image: url("/Semester2/Midterm/Image/service.svg");
+    background-size: 1000px;
     background-position: center;
 }
-header {
-    position: relative;
-    top: 0;
+.service-heading {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    flex-direction: column;
+}
+.service-heading h2 {
+    line-height: 55px;
+    font-size: 2.2rem;
+    color: #07A5E3;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.service-heading p{
+    font-size: 2.2;
+    color: black;
+    width: 50%;
+}
+
+/* styling container and box within */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 30px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    box-shadow: 2px 2px 20px rgba(7, 7, 8, 0.13);
+    border-radius: 10px;
+    background-color: white;
+    margin: 20px;
+    flex-grow: 1;
+}
+/* Styling Box for about page */
+.box1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 400px;
+        text-align: center;
+        box-shadow: 2px 2px 20px rgba(7, 7, 8, 0.13);
+        border-radius: 2px;
+        background-color: white;
+        margin: 20px;
+        flex-grow: 1;
+}
+/* styling images in box */
+.box img {
+    height: 150px;
+    margin: 10px;
+}
+/* styling images in box for about page */
+.box1 img {
+    height: 150px;
+    margin: 2px;
+}
+
+/* styling the font and paragrah spacing */
+.box font {
+    font-size: 1.5rem;
+    color: black;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.box p{
+    font-size: 1rem;
+    color: black;
+    display: block;
+    max-width: 500px;
+}
+/* styling button in box */
+.box a{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: royalblue;
+    border: 2px solid royalblue;
+    text-transform: uppercase;
+    margin: auto;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    
+}
+
+.box a:hover {
+    background-color: royalblue;
+    color: white;
+    box-shadow: 2px 10px 30px rgba(7, 7, 8, 0.13);
+    transition: 0.2s;
+}
+
+/* -----Styling website footer */
+.footer {
     width: 100%;
-    padding: 30px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    padding: 0px 5%;
+    border-top: 1px solid rgba(7, 7, 8, 0.13) ;
 }
-header .logo{
+
+footer a,
+footer p{
+    color: black;
+}
+
+
+/* --------- Responsive layout -------
+--------- styling layout for nav at maxwidth */
+@media (max-width : 1100px){
+    nav {
+        justify-content: space-between;
+        height: 65px;
+    }
+    
+}
+
+
+/* styling the main paragraph content */
+@media (max-width : 720px){
+    .main-text p{
+        width: 70%;
+    }
+    /* styling layout for schedule when website is responsive */
+    .contact-details,
+    .schedule-time {
+        flex-grow: 1;
+        margin: 10px;
+    }
+    .contact-details h3,
+    .schedule-time h3 {
+        font-size: 1rem;
+    }
+    .schedule-time p,
+    .contact-details p {
+        font-size: 0.8rem;
+    }
+    .schedule {
+        width: 100%;
+        flex-wrap: wrap;
+        margin: 0px;
+        padding: 0px 20px;
+    }
+}
+
+/* styling contact us page */
+.contactus {
+    background-image: url("/Semester2/Midterm/Image/service.svg");
+    background-size: 1000px;
+    background-position: center;
+}
+.contact-heading {
+    margin-top: 60px;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    position: relative;
-    width: 100%;
-    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    flex-direction: column;
 }
-
-header .Navigation a{
-    color:white;
-    background: blue;
-    text-decoration: none;
-    font-weight: 500;
+.contact-heading h2 {
+    line-height: 55px;
+    font-size: 2.2rem;
+    color: #07A5E3;
     letter-spacing: 1px;
-    padding: 2px 15px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.contact-heading p{
+    font-size: 2.2;
+    color: black;
+    width: 50%;
+}
+/* styling form within contact us page */
+.form {
+    margin: auto;
+    max-width: 80%;
+    height: auto; 
+}
+.form .form1 {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.form .form1 {
+    width: 90%;
+    height: auto%;
+    padding: 20px;
+    background: white;
     border-radius: 20px;
-    transition: 0.3s;
-    transition-property: background;
+    box-shadow: 0 8px 16px rgba(0, 0,0, 3);
 }
-header .Navigation a:not(:last-child){
-    margin-right: 30px;
-}
-header .Navigation a:hover {
-    background: plum;
-}
-.content {
-    max-width: 650px;
-    margin: 60px 100px;
-}
-
-.content .info h2{
-     color: plum;
-     font-size: 40px;
-     text-transform: uppercase;
-     font-weight: 800;
-     letter-spacing: 2px;
-     line-height: 60px;
-     margin-bottom: 30px;
-     
-}
-
-.content .info p{
-    font-size: 20px;
-    font-weight: 800;
-    margin-bottom: 40px;
-    color: blue;
-}
-.content .info-btn {
-    color:  white;
-    background: #22D466;
+/* styling the button in the form */
+.form .btn {
+    color: black;
+    background: royalblue;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 2px;
     padding: 10px 20px;
     border-radius: 5px;
+}
+
+/* adding animation to box when clicked  */
+.box1:active {
+    transform: scale(1.25) ;
     transition: 0.3s;
-    transition-property: background;
-}
-.content .info-btn:hover {
-    background: #5EFF9C;
-}
-
-.icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-}
-.icons a {
-    position: relative;
-    color: #22D466;
-    font-size: 25px;
-    transition: 0.3s;
-    transition-property: transform;
-}
-.icons a:not(:last-child){
-    margin-right: 60px;
-}
-.icons a:hover {
-    transform: scale(1.5);
-}
-
-label {
-    display: none;
-}
-#check {
-    z-index: 3;
-    display: none;
-}
-
-/* MEDIA Queries */
-
-@media (max-width: 960px){
-    header .Navigation {
-        display: none;
     }
-    label {
-        display: block;
-        font-size: 25px;
-        cursor: pointer;
-        transition: 0.3s;
-        transition-property: color;
-    }
-    label:hover {
-        color: blue;
-    }
-    label .close-btn{
-        display: none;
-    }
-    #check:checked ~ header .Navigation {
-        z-index: 2;
-        position: fixed;
-        background: #34AAD9;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    #check:checked ~ header .Navigation a {
-        font-weight: 700;
-        margin-right: 0;
-        margin-bottom: 50px;
-        letter-spacing: 2px;
-    }
-    #check:checked ~ header label .menu-btn {
-        display: none;
-    }
-    #check:checked ~ header label .close-btn {
-        z-index: 2;
-        display: block;
-        position: fixed;
-    }
-
-    label .menu-btn {
-        position: absolute;
-    }
-
-    header .logo {
-        position: absolute;
-        bottom: -6px;
-    }
-
-    .content .info h2 {
-        font-size: 45px;
-        line-height: 50px;
-    }
-}
