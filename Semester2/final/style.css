@@ -1,0 +1,53 @@
+/* styling the navigation fonts to a more appealing font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+/* styling the body of the site into border with 0 margin and 0 padding , and adding a hiddin over flow so that when scrolling up it hides behind navigation */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.navbar {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    background: rgba(78, 78, 187, 0);
+    padding: 20px 0;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+    padding-left: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: violet;
+}
+/* styling about start */
+
+
+#About .btn a{
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#About .btn:hover{
+    border: 2px solid plum;
+}
+
+/* styling btn for services */
+#Services .btn a{
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#About .btn:hover{
+    border: 2px solid plum;
+}
